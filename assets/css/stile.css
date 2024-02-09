@@ -1,0 +1,169 @@
+
+@font-face {
+    font-family: fuentes;
+    src: url("../fonts/Quicksand-VariableFont_wght.ttf");
+}
+
+* {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 0;
+    font-family: fuentes;
+
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../images/fondo.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container {
+    background-color: #fff;
+    width: 50vw;
+    height: 90vh;
+    padding: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+    z-index: 1000;
+    position: relative;
+}
+
+.box {
+
+    border: #000 3px solid;
+    width: 10vw;
+    height: 3vh;
+    margin: 0.5em;
+    box-sizing: content-box;
+}
+
+.loadBar {
+    height: 100%;
+    width: 100%;
+    animation: loading 5s;
+    background-color: pink;
+}
+
+h1, p {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+p {
+    font-size: 1em;
+}
+
+.alert {
+
+    z-index: 2000;
+    position: absolute;
+    margin: auto;
+    width: 70%;
+    /* height: 45%; */
+    background-color: pink;
+    border-radius: 10px;
+    padding: 1em;
+    display: none;
+
+}
+
+.alert__container {
+    width: 100%;
+    height: 100%;
+    border: #000 3px solid;
+    padding: 1em;
+}
+
+.alert__texts {
+    width: 100%;
+    height: 50%;
+}
+
+.alert__button__cont {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+}
+
+.alert__h1, .alert__p {
+    margin-bottom: 1em;
+}
+
+.button {
+    width: 10vw;
+    height: 5vh;
+    background-color: #fff;
+    box-shadow: none;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: all, 0.2s;
+}
+
+.button:hover {
+    filter: brightness(0.94);
+}
+
+@keyframes loading {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@media (max-width: 720px) {
+    
+    .container {
+        width: 95%;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .box {
+        width: 40%;
+    }
+
+    .alert {
+        width: 100%;
+        height: 40%;
+    }
+
+    .alert__button__cont{
+
+        height: 60%;
+
+    }
+
+    .button {
+        width: 50%;
+        height: 30%;
+    }
+
+    .alert__p {
+        text-align: justify;
+        margin-top: .5em;
+        margin-bottom: .5em;
+    }
+}
